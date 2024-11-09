@@ -1,0 +1,36 @@
+# This is the name of the workflow, which will be displayed in the Actions tab in GitHub
+name: Java CI with Maven
+
+# This section defines when the workflow should run
+on:
+  push:
+    branches:
+      - main  # Run this workflow on pushes to the main branch
+  pull_request:
+    branches:
+      - main  # Run this workflow on pull requests targeting the main branch
+
+jobs:
+  build:
+    # The type of machine that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step to check out the repository code to the workflow runner
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step to set up JDK 17 to run the Java build
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'  # The JDK distribution to use
+          java-version: '17'  # The version of Java to install
+
+      # Step to build the project using Maven
+      - name: Build with Maven
+        run: mvn clean install
+
+      # Step to run unit tests using Maven
+      - name: Run Unit Tests
+        run: mvn test
