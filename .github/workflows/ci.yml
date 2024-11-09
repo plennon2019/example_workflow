@@ -24,8 +24,8 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'  # The JDK distribution to use
-          java-version: '17'  # The version of Java to install
+          java-version: '21'  # The version of Java to install
+          distribution: ''
 
       # Step to build the project using Maven
       - name: Build with Maven
