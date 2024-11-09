@@ -39,6 +39,7 @@ jobs:
       #Part 2
       # Step to build a Docker image
       - name: Build Docker Image
+        # I am calling my image product_pipe_image, change to whatever suits.
         run: docker build -t product_pipe_image .
 
       # Step to log in to Docker Hub
@@ -50,6 +51,7 @@ jobs:
 
       # Step to push Docker image to Docker Hub
       - name: Push Docker Image
+        #Note the pipe symbol | is so that I can write on two lines
         run: |
           docker tag product_pipe_image ${{ secrets.DOCKER_USERNAME }}/product_pipe_image:latest \
           && docker push ${{ secrets.DOCKER_USERNAME }}/product_pipe_image:latest
