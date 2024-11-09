@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
 
       # Step to set up JDK 17 to run the Java build
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
           java-version: '21'  # The version of Java to install
