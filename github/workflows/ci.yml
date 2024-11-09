@@ -5,10 +5,10 @@ name: Java CI with Maven
 on:
   push:
     branches:
-      - main  # Run this workflow on pushes to the main branch
+      - master  # Run this workflow on pushes to the main branch
   pull_request:
     branches:
-      - main  # Run this workflow on pull requests targeting the main branch
+      - master  # Run this workflow on pull requests targeting the main branch
 
 jobs:
   build:
