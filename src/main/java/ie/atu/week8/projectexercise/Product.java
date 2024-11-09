@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Product {
     //Adding a comment
+    //Adding another comment
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
