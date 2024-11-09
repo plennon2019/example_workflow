@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '21'  # The version of Java to install
-          distribution: 'Temurin'
+          distribution: 'adopt'
           #Usually Temurin, corretto (Amazon) or openjdk (OpenJdk)
 
       # Step to build the project using Maven
